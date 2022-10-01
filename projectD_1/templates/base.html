@@ -17,13 +17,15 @@
   </head>
   <body>
     <header>
-        {% include 'includes/heater.html'%}
+        {% include 'includes/header.html' %}
     </header>
     <main>
         {% block content %}
             Список постов
-        {% endblock %} 
+        {% endblock %}
     </main>
+    <a href="{% url 'posts:groups' %}">Groups</a>
+    <a href="{% url 'posts:group' %}">Group</a>
     <footer class="page-footer font-small blue border-top">
         {% include 'includes/footer.html' %}
     </footer>
