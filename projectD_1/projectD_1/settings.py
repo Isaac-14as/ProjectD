@@ -52,11 +52,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'projectD_1.urls'
 
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'BACKEND': 'django.template.backends.django.DjangoTemplates', # язык шаблонов
+        'DIRS': [TEMPLATES_DIR], # путь к шаблонам
+        'APP_DIRS': True, # показывает, нужно ли искать шаблоны в папках приложений
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
