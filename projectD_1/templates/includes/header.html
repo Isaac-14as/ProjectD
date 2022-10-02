@@ -1,12 +1,17 @@
 
 <!-- Использованы классы бустрапа для создания типовой навигации с логотипом -->
-<!-- В дальнейшем тут будет создано полноценное меню -->    
+<!-- В дальнейшем тут будет создано полноценное меню -->
+{% load static %}
 <nav class="navbar navbar-light" style="background-color: lightskyblue">
     <div class="container">
     <a class="navbar-brand" href="index.html">
-        <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="{% static 'img/logo.png' %}"> 
+        {% comment %} <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> {% endcomment %}
         <!-- тег span используется для добавления нужных стилей отдельным участкам текста -->
-        <span style="color:red">Ya</span>tube
+        <a href="{% url 'posts:main' %}">
+            <span style="color:red">Ya</span>tube
+        </a>
+
     </a>
     </div>
 </nav>      

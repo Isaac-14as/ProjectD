@@ -6,7 +6,7 @@ app_name = 'posts'
 
 urlpatterns = [
     # Главная страница
-    path('', views.index, ),
+    path('', views.index, name = 'main'),
     # Страницы сообществ
     path('groups/', views.groups, name = 'groups'),
 
