@@ -12,7 +12,6 @@
     <meta name="msapplication-TileColor" content="#000">
     <meta name="theme-color" content="#ffffff">
     <!-- Подключен файл со стандартными стилями бустрап -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> 
     <title>Лев Толстой – зеркало русской революции.</title>
@@ -26,8 +25,8 @@
             Список постов
         {% endblock %}
     </main>
-    <a href="{% url 'posts:groups' %}">Groups</a>
-    <a href="{% url 'posts:group' %}">Group</a>
+    {% comment %} <a href="{% url 'posts:groups' %}">Groups</a>
+    <a href="{% url 'posts:group' %}">Group</a> {% endcomment %}
     <footer class="page-footer font-small blue border-top">
         {% include 'includes/footer.html' %}
     </footer>
