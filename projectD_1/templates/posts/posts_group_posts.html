@@ -1,16 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
+  <h1>{{ group.title }}</h1>
   {% for post in posts %}
   <ul>
     <li>
-      Автор: {{ post.author.get_full_name }}
+      Номер поста: {{ post.pk }}
     </li>
     <li>
-      Дата публикации: {{ post.pub_date|date:"d E Y" }}
+      Название фильма: {{ post.name }}
     </li>
+    <li>
+      Режиссер: {{ post.producer }}
+    </li>
+
   </ul>
-  <p>{{ post.text }}</p>    
-  <a href="">все записи группы</a>
+  <p>{{ post.text }}</p>  
+  {% comment %} <form method="post">
+    {% csrf_token %}
+    <button class="btn btn-success" type="submit">Добавить в избранное</button>
+  </form> {% endcomment %}
   {% if not forloop.last %}<hr>{% endif %}
   {% endfor %} 
+  <a href="{% url 'posts:create_post' %}">
+    Создать пост
+  </a>
 {% endblock %} 

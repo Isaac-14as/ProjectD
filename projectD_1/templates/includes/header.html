@@ -5,11 +5,14 @@
 <nav class="navbar navbar-light" style="background-color: lightskyblue">
     <div class="container">
     <a class="navbar-brand" href="{% url 'posts:main' %}">
-        <img src="{% static 'img/logo.png' %}"> 
-        {% comment %} <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> {% endcomment %}
-        <!-- тег span используется для добавления нужных стилей отдельным участкам текста -->
-
+        Социальная сеть для любителей кино
     </a>
+    <a class="navbar-brand" href="{% url 'posts:groups' %}">
+        Все группы
+    </a>
+    <a class="navbar-brand" href="{% url 'posts:create_post' %}">
+        Создать пост
+      </a>
     </div>
 </nav>      
 
