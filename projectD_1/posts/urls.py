@@ -10,7 +10,9 @@ urlpatterns = [
     # Страницы сообществ
     path('groups/', views.groups, name = 'groups'),
 
-    path('group/<slug:slug>/', views.group_posts, name = 'group')
+    path('group/<slug:slug>/', views.group_posts, name = 'group'),
+
+    path('/create_post/', views.create_post, name = 'create_post')
     
     # path('group/', views.group_posts, name = 'group')
 

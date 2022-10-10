@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>Добавление поста</div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.name }}<br>
+        {{ form.producer }}<br>
+        {{ form.text }}<br>
+        <div>Жанр</div>
+        {{ form.group }}<br>
+        <span>{{ error }}</span>
+        <button class="btn btn-success" type="submit">
+            Добавить пост
+        </button>
+    </form>
+
+{% endblock %} 
